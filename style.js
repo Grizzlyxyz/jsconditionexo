@@ -133,3 +133,37 @@ let vieille_dame = {
 // Exo 5 B
 // Rajouter une method "se_promener" à la vieille_dame, qui change la valeur de l'objet à perdu 
 
+let vieille_dame = {
+    age: 84,
+    nom: {
+      prenom: "Josianne",
+      nom_famille: "Armaric",
+    },
+    moral: "mal",
+    objet: "canne",
+    se_plaindre(){
+      if (this.moral == "mal") {
+        alert('Vous me dérangez ! ! !');
+      } else if(this.moral == "bien") {
+        alert('Bonjour Mr. ' + vieil_homme.nom);
+      }
+      return this.moral;
+    },
+    se_promener(){
+      this.objet = "perdu";
+      return this.objet;
+    },
+   };let vieil_homme = {
+    nom: "Hold",
+    prenom: "Patrick",
+    age: 68,
+    salut(){
+      alert('Bonjour '+ vieille_dame.nom.prenom + ' ' + vieille_dame.nom.nom_famille );
+      vieille_dame.se_plaindre();
+      return vieille_dame;
+    },
+    adoucir(){
+      vieille_dame.moral = "bien";
+      return vieille_dame;
+    },
+   }
